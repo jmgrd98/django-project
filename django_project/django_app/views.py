@@ -6,3 +6,6 @@ def index(request):
 
 def home(request):
     return render(request, 'usuarios/home.html')
+
+def login(request):
+    return render(request, 'usuarios/login.html')

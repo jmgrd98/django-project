@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Usuario
 
 def home(request):
-    return render(request, 'usuarios/home.html')
+    return render(request, 'home/home.html')
 
 def usuarios(request):
     novo_usuario = Usuario()
@@ -13,4 +13,5 @@ def usuarios(request):
     usuarios = {
         'usuarios': Usuario.objects.all()
     }
+
     return render(request, 'usuarios/usuarios.html', usuarios)
